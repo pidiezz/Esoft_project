@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6462088867bb4bfea2845e161631dd74" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="WFTuturialModel.AgentSet" Width="1.5" PointX="0.625" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFTuturialModel.ClientSet" Width="1.5" PointX="0.5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFTuturialModel.DealSet" Width="1.5" PointX="11.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFTuturialModel.DemandSet" Width="1.5" PointX="5.875" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFTuturialModel.RealEstateSet" Width="1.5" PointX="0.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFTuturialModel.SupplySet" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <AssociationConnector Association="WFTuturialModel.FK_DemandSet_AgentSet" ManuallyRouted="false" />
+        <AssociationConnector Association="WFTuturialModel.FK_SupplySet_AgentSet" ManuallyRouted="false" />
+        <AssociationConnector Association="WFTuturialModel.FK_DemandSet_ClientSet" ManuallyRouted="false" />
+        <AssociationConnector Association="WFTuturialModel.FK_SupplySet_ClientSet" ManuallyRouted="false" />
+        <AssociationConnector Association="WFTuturialModel.FK_DealSet_DemandSet" ManuallyRouted="false" />
+        <AssociationConnector Association="WFTuturialModel.FK_DealSet_SupplySet" ManuallyRouted="false" />
+        <AssociationConnector Association="WFTuturialModel.FK_SupplySet_RealEstateSet" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

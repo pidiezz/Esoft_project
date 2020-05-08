@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +55,104 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AgentSet.cs">
+      <DependentUpon>ModelTuturial.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientSet.cs">
+      <DependentUpon>ModelTuturial.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DealSet.cs">
+      <DependentUpon>ModelTuturial.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DemandSet.cs">
+      <DependentUpon>ModelTuturial.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormDeal.Designer.cs">
+      <DependentUpon>FormDeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDemand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDemand.Designer.cs">
+      <DependentUpon>FormDemand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClients.Designer.cs">
+      <DependentUpon>FormClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgents.Designer.cs">
+      <DependentUpon>FormAgents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRealEstate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRealEstate.Designer.cs">
+      <DependentUpon>FormRealEstate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupply.Designer.cs">
+      <DependentUpon>FormSupply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelTuturial.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTuturial.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelTuturial.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTuturial.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelTuturial.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTuturial.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealEstateSet.cs">
+      <DependentUpon>ModelTuturial.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupplySet.cs">
+      <DependentUpon>ModelTuturial.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormDeal.resx">
+      <DependentUpon>FormDeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDemand.resx">
+      <DependentUpon>FormDemand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClients.resx">
+      <DependentUpon>FormClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgents.resx">
+      <DependentUpon>FormAgents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRealEstate.resx">
+      <DependentUpon>FormRealEstate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupply.resx">
+      <DependentUpon>FormSupply.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +161,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="ModelTuturial.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelTuturial.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelTuturial.edmx.diagram">
+      <DependentUpon>ModelTuturial.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +183,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelTuturial.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTuturial.edmx</DependentUpon>
+      <LastGenOutput>ModelTuturial.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelTuturial.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTuturial.edmx</DependentUpon>
+      <LastGenOutput>ModelTuturial.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
